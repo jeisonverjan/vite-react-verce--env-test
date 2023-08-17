@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   const viteAppKey = import.meta.env.VITE_APP_KEY;
-  const viteAppKeyProcess = process.env.VITE_APP_KEY;
+  const viteAppKeyProcess = import.meta.env.VITE_APP_KEY;
   const reactAppKey = import.meta.env.REACT_APP_KEY;
   const appKey = import.meta.env.APP_KEY;
 

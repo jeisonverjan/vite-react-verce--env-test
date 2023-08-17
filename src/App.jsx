@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
   const viteAppKey = import.meta.env.VITE_APP_KEY;
-  const viteAppKeyProcess = window?.process?.env?.VITE_APP_KEY;
+  const viteAppKeyProcess = process.env.VITE_APP_KEY;
   const reactAppKey = import.meta.env.REACT_APP_KEY;
   const appKey = import.meta.env.APP_KEY;
 
@@ -33,24 +33,32 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <p>
-        {viteAppKey
-          ? `<strong>${viteAppKey}</strong> import.meta.env`
-          : "variable viteAppKey no existe"}
+        {viteAppKey ? (
+          <strong>`${viteAppKey} import.meta.env`</strong>
+        ) : (
+          "variable viteAppKey no existe"
+        )}
       </p>
       <p>
-        {viteAppKeyProcess
-          ? `<strong>${viteAppKeyProcess}</strong> windows.proccess.env`
-          : "variable viteAppKeyProcess no existe"}
+        {viteAppKeyProcess ? (
+          <strong>`${viteAppKeyProcess} windows.proccess.env`</strong>
+        ) : (
+          "variable viteAppKeyProcess no existe"
+        )}
       </p>
       <p>
-        {reactAppKey
-          ? `<strong>${reactAppKey}</strong> import.meta.env`
-          : "la variable reactAppKey no existe"}
+        {reactAppKey ? (
+          <strong>`${reactAppKey} import.meta.env`</strong>
+        ) : (
+          "la variable reactAppKey no existe"
+        )}
       </p>
       <p>
-        {appKey
-          ? `<strong>${appKey}</strong>  import.meta.env`
-          : "la variable appKey no existe"}
+        {appKey ? (
+          <strong>`${appKey} import.meta.env`</strong>
+        ) : (
+          "la variable appKey no existe"
+        )}
       </p>
     </>
   );

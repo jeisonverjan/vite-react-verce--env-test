@@ -1,0 +1,15 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ],
+    "functions": {
+        "api/serverless/keep-alive.js": {
+            "cron": [
+                "0 */1 * * * *"
+            ]
+        }
+    }
+}

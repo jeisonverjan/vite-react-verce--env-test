@@ -8,7 +8,7 @@
     "crons": [
         {
             "path": "/api/serverless/keep-alive",
-            "schedule": "*/2 * * * *"
+            "schedule": "0 0 * * *"
         }
     ]
 }
